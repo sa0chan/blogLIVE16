@@ -1,0 +1,110 @@
+/******MOBILE FIRST******/
+
+/********************************************
+CSS COMMUN
+********************************************/
+*{
+	box-sizing:border-box;
+}
+
+
+      
+/*body{
+    
+    background-image : url(../backOffice/img/macarons-2548810__340.jpg);
+     
+ }  */   
+
+img {
+    border-style: none;
+    width: 100%;
+}
+
+table, td {
+  border: 1px solid #ffeff2;
+  text-align:center;
+  padding:5px;
+  background-color: #fdfffc;
+}
+
+table thead{
+    background-color : #ffdbe1;
+    border: 1px solid #ffeff2;
+    text-align:center;
+    padding:5px;
+}
+
+#oldImg {
+    width :100px;
+    margin:20px;
+    display:flex;
+}
+
+#imgAccueil{
+    width:50%;
+}
+ 
+ 
+#boutonAdd{
+    width:200px;
+    padding:10px;
+    margin:20px;
+}
+
+#boutonErase{
+    margin:20px 0;
+}
+/********************************************
+    FIN CSS COMMUN
+    ********************************************/
+    
+    
+    /********************************************
+    CSS HEADER
+    ********************************************/
+   
+    
+    /********************************************
+    FIN CSS HEADER
+    ********************************************/
+    
+    
+    /********************************************
+    CSS ACCUEIL
+    ********************************************/
+    
+    
+    /********************************************
+    FIN CSS ACCUEIL
+    ********************************************/
+    
+    
+    /********************************************
+    CSS FOOTER
+    ********************************************/
+    
+  
+    
+    
+    
+    
+    /********************************************
+    FIN CSS FOOTER
+    ********************************************/
+    
+    
+    /********************************************
+    CSS MEDIA QUERIES
+    ********************************************/
+    
+    /******TABLET******/
+    @media screen and (min-width:768px){ /*il existe different type de media print pour imprimer ---------*/
+    /*ici on réécrit ce qui change pas car ce qui est en haut est hérité*/	
+     
+       
+    }
+    
+    /******DESKTOP******/
+    @media screen and (min-width:1025px){
+        
+      

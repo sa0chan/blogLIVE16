@@ -1,0 +1,46 @@
+<form  action="addArticle.php" method="POST" enctype="multipart/form-data"> <!--enctype="multipart/form-data" permet de d'envoyer en binaire-->
+  <fieldset>
+    <legend>Création d'un article</legend>
+    
+    <div class="form-group">
+      <label for="categorieForm">Catégorie</label>
+      <select class="form-control" id="categorieForm" name ="categorie">
+        <?php foreach($categories as $categorie):?>
+        <!--ATTENTION une catégorie = a une ligne donc pas besoin de mettre categorie vec 2 index-->
+          <option name ="categorie" method="POST" value="<?=$categorie['c_id']?>">
+          <?=$categorie['c_title']?>
+          </option>
+        <?php endforeach;?>
+       
+    </select>
+    </div>
+    
+   <div class="form-group">
+      <label for="titreForm">Titre</label>
+      <input type="text" class="form-control" id="titreForm" name="titreForm" aria-describedby="titreForm" placeholder="Votre titre" required>
+    </div>
+    
+    <div class="form-group">
+        
+    <label for="dateForm">Date de publication</label>
+    <input type="date" class="form-control" id="dateForm" name="dateForm" aria-describedby="dateForm">
+    
+    <!--<input type="date" class="form-control" id="dateForm" aria-describedby="dateForm">-->
+    </div>
+  
+    <div class="form-group">
+      <textarea class="form-control" id="articleForm" placeholder="Votre article" name="articleForm" rows="12"></textarea>
+    </div>
+    
+    <div class="form-group">
+      <label for="inserImageForm">Insérer une image</label>
+      <input type="file" class="form-control-file" id="inserImageForm" name="inserImageForm" aria-describedby="fileHelp">
+      <input type='hidden' name='max_file_size' value='250000'>
+    </div>
+    
+    
+  
+    <button type="submit" class="btn btn-primary" name='envoi'>Enregistrer</button>
+  </fieldset>
+</form>
+

@@ -1,0 +1,30 @@
+
+<h1>Catégories</h1>
+<p>voici la liste des catégories</p>
+<a id ="boutonAdd"class="nav-link btn btn-secondary" href="addCategorie.php"><i class="fas fa-plus-circle"></i> Ajouter une catégorie</a>
+
+<table>
+    <thead>
+        <tr>
+            
+            <th scope="col"></th>
+            <th scope="col">ID article</th>
+            <th scope="col">Titre</th>
+       
+        </tr>
+      </thead>
+      <tbody>
+        <?php $i=0 ?>
+        <?php foreach($categories as $categorie):?>
+            <tr>
+           
+                <td><a href="delCategorie.php?id=<?=$categorie['c_id']?>"><i class="fas fa-trash-alt"></i></a></td>         
+                <td name ="id"><?=$categorie['c_id']?> </td>
+                <td name ="titre de la catégorie"><?=$categorie['c_title']?></td>
+                
+            </tr> 
+        <?php $i++?>
+        <?php endforeach;?>
+        
+    </tbody>
+</table>

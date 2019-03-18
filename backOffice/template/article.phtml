@@ -1,0 +1,42 @@
+
+<h1>Articles</h1>
+<p>voici la liste des article</p>
+<a id ="boutonAdd"class="nav-link btn btn-secondary" href="addArticle.php"><i class="fas fa-plus-circle"></i> Ajouter un article</a>
+
+<table>
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col">ID auteur</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">ID article</th>
+            <th scope="col">Catégorie</th>
+            <th scope="col">Titre</th>
+            <th scope="col">Date de publication</th>
+            <th scope="col">Contenu de l'article</th>
+            <th scope="col">Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php $i=0 ?>
+        <?php foreach($articles as $article):?>
+            <tr>
+                <td><a href="editArticle.php?id=<?=$article['a_id']?>"><i class="fas fa-pencil-alt"></i></a></td>  
+                <td><a href="delArticle.php?id=<?=$article['a_id']?>"><i class="fas fa-trash-alt"></i></a></td>         
+                <td name ="idAut"> <?=$article['a_auteur']?></td>
+                <td name ="nom"><?=$article['u_nom']?></td>
+                <td name ="prenom"><?=$article['u_prenom']?></td>
+                <td name ="idArt" ><?=$article['a_id']?></td> 
+                <td name ="cat"><?=$article['c_title']?></td>
+                <td name ="titre"><?=$article['a_titre']?> </td>
+                <td name ="date"><?=$article['a_date_publication']?> </td>
+                <td name ="content"><?=$article['a_contenu']?> </td>
+                <td name ="img"><img src="<?= UPLOADS_URL.$article['a_image']?>" alt="<?=$article['a_titre']?>"></td>
+            </tr> 
+        <?php $i++?>
+        <?php endforeach;?>
+        
+    </tbody>
+</table>

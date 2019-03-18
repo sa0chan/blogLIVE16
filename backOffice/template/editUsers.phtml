@@ -1,0 +1,51 @@
+<form action="editUsers.php" method="POST" enctype="multipart/form-data">
+  <input type="hidden" name="id" value="<?= $idUser?>">
+  
+  <fieldset>
+    <legend>Modification d'un utilisateur</legend>
+    
+    <div class="form-group">
+      
+      <label for="nomForm">Nom</label>
+      <input type="text" class="form-control" id="nomForm" aria-describedby="nom" name="nomForm" placeholder="Votre nom" value="<?=$nom?>">
+      
+    </div>
+    
+    <div class="form-group">
+      
+      <label for="prenomForm">Prénom</label>
+      <input type="text" class="form-control" id="prenomForm" aria-describedby="prenom" name="prenomForm" placeholder="Votre prénom" value="<?=$prenom?>">
+      
+    </div>
+    <div class="form-group">
+      
+      <label for="emailForm">E-mail</label>
+      <input typeUser="text" class="form-control" id="emailForm" aria-describedby="email" name="email" placeholder="Votre e-mail" value="<?=$mail?>">
+          
+ <!--   </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="password"placeholder="mot de passe" value="<//?=$password?>">
+    </div>
+    -->
+    
+    <div class="form-group">
+      <label for="statusForm">Status</label>
+      <select class="form-control" id="statusForm" name ="statusForm" value="<?=$valide?>">
+        <option  value="1">Valide</option>
+        <option  value="0">Bloqué</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="roleForm">Rôle</label>
+      <select class="form-control" id="roleForm" name="roleForm" value="<?=$role?>" >
+        <option  value="ROLE_AUTEUR">Auteur</option>
+        <option  value="ROLE_ADMIN">Administrateur</option>
+      </select>
+    </div>
+  <button type="submit" class="btn btn-primary" name='envoi'>Enregistrer</button>
+  </fieldset>
+   
+</form> 
+  

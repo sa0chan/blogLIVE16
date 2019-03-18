@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+
+     <!--responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Admin</title>
+    
+    <link rel="stylesheet" href="../backOffice/css/bootstrap.min.css" type="text/css" />
+    
+    <!--date-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+    
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <!--tinyMCE pour permetre ecriture stylisée-->
+    <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
+     <!--CSS-->
+     <link rel="stylesheet" href="../backOffice/css/normalize.css" type="text/css" />
+     <link rel="stylesheet" href="../backOffice/css/main.css" type="text/css" />
+     
+</head>
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            
+          
+        </nav>
+    </header>
+    <main class="container-fluid">
+      <section>
+
+        <form action="login.php" method="POST" class="container">
+          <fieldset>
+            <legend>Connectez-vous</legend>
+        
+             <div class="form-group">
+              <label for="exampleInputEmail1">Adresse e-mail</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="mail">
+              <small id="emailHelp" class="form-text text-muted">Ne divulguez jamais votre mot de passe.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Mot de passe</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+              
+              <p class="text-danger"><?=$erreur?></p>
+            </div>
+            
+           </fieldset>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </fieldset>
+        </form>
+<footer>
+</footer>
+    
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+    
+</body>
+

@@ -1,0 +1,38 @@
+
+<h1>Utilisateurs</h1>
+<p>voici la liste des utilisateurs</p>
+<a id ="boutonAdd"class="nav-link btn btn-secondary" href="addUser.php"><i class="fas fa-plus-circle"></i> Ajouter un utilisateurs</a>
+
+<table>
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col">ID utilisateur</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Status</th>
+            <th scope="col">Rôle</th>
+       
+        </tr>
+      </thead>
+      <tbody>
+        <?php $i=0 ?>
+        <?php foreach($utilisateurs as $utilisateur):?>
+            <tr>
+                <td><a href="editUsers.php?id=<?=$utilisateur['u_id']?>"><i class="fas fa-pencil-alt"></i></a></td>  
+                <td><a href="delUser.php?id=<?=$utilisateur['u_id']?>"><i class="fas fa-trash-alt"></i></a></td>         
+                <td name ="id"><?=$utilisateur['u_id']?> </td>
+                <td name ="nom"><?=$utilisateur['u_nom']?></td>
+                <td name ="prenom"><?=$utilisateur['u_prenom']?></td>
+                <td name ="email"><?=$utilisateur['u_email']?></td>
+                <td name ="status"><?=$utilisateur['u_valide']?></td>
+                <td name ="role"><?=$utilisateur['u_role']?></td>
+                
+            </tr> 
+        <?php $i++?>
+        <?php endforeach;?>
+        
+    </tbody>
+</table>
