@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
 
-     <!--responsive-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>un titre</title>
-
-     <!--CSS-->
-     <link rel="stylesheet" href="css/normalize.css" type="text/css" />
-     <link rel="stylesheet" href="css/main.css" type="text/css" />
-     
-</head>
-<body>
+<div>
+<h1>Liste des articles</h1>    
     
-</body>
-</html>
+    <?$i=0?>
+    <?php foreach($articles as $article):?>
+    <article>
+        <h2><?$article['a_titre']?></h2>
+        <p>Cet article a été réalisé par : <?$article['a_auteur']?>  le <?$article['a_date_publication']?></p>
+        <img src="<?= UPLOADS_URL.$article['a_image']?>" alt="<?=$article['a_titre']?>
+        <p><?$article['a_contenu']?></p>
+    </article>
+    <?php $i++?>
+    <?php endforeach;?>
 
-
-
+</div>

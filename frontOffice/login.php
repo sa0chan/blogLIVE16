@@ -6,6 +6,7 @@ session_start();
 
 include('../config/config.php');
 include('../lib/bdd.lib.php');
+include('../lib/app.lib.php');
 
 
 $vue = 'login.phtml';

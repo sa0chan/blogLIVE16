@@ -7,11 +7,13 @@ CSS COMMUN
 	box-sizing:border-box;
 }
 
-html{
-	font-size: 62.5%; /*par défaut 1rem = 16px => 1rem = 10px;*/
-}
+/*html{
+	
+}*/
       
-    
+.articleListe{
+    width:25px;
+}
     
     /********************************************
     FIN CSS COMMUN

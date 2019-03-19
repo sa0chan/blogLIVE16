@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Admin</title>
+    <title>Accueil Blog</title>
     
     <link rel="stylesheet" href="../backOffice/css/bootstrap.min.css" type="text/css" />
     
@@ -30,7 +30,7 @@
     <header>
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="#">BackOffice de <?=$_SESSION['user']['prenom']?></a>
+            <a class="navbar-brand" href="#">Session de <?=$_SESSION['user']['prenom']?></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,16 +41,19 @@
                     <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="article.php">Article</a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes" aria-expanded="false">Categories <span class="caret"></span></a>
+                    <!--<div class="dropdown-menu show">
+                        <div class="dropdown-divider">
+                            <//?php $i=0 ?>
+                            <//?php foreach($categories as $categorie):?>
+                            <a class="dropdown-item" href=categorie.php?id=<//?=$categorie['c_id']?>><//?$categorie['c_title']?></a>
+                            <//?php $i++?>
+                            <//?php endforeach;?>
+                      </div>
+                    </div>-->
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="categorie.php">Catégorie</a>
-                  </li>
-                  <!--<li class="nav-item">
-                    <a class="nav-link" href="ModerationCommentaire.php">Commentaires</a>
-                  </li>-->
                    <li class="nav-item">
-                    <a class="nav-link" href="users.php">Utilisateur</a>
+                    <a class="nav-link" href="users.php">Mon profil</a>
                   </li>
                 </ul>
                   <a class="btn btn-secondary btn-lg" href="logOut.php" role="button">Déconnexion <i class="fas fa-sign-out-alt"></i></a>
@@ -79,6 +82,7 @@
       </section>
     </main>
     <footer>
+        
     </footer>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 

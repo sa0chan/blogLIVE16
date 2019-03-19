@@ -1,7 +1,11 @@
 <?php
 session_start();
+if(!isset($_SESSION['connected']) || $_SESSION['connected'] !== true )
+header('Location:login.php');
+
 include('../config/config.php');
 include('../lib/bdd.lib.php');
+include('../lib/app.lib.php');
 
 
 
@@ -18,7 +22,7 @@ try
    
     $sth1 = $dbh->prepare('SELECT * FROM b_user');
     $sth1->execute();
-    
+    $flashbag = getFlashBag();
     $utilisateurs = $sth1->fetchAll(PDO::FETCH_ASSOC);
     
     

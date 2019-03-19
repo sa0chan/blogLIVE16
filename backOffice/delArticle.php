@@ -1,6 +1,9 @@
 <?php 
 
-session_start()
+session_start();
+if(!isset($_SESSION['connected']) || $_SESSION['connected'] !== true )
+header('Location:login.php');
+
 include('../config/config.php');
 include('../lib/bdd.lib.php');
 
@@ -51,7 +54,7 @@ try
         $sth2->bindValue(':idArticle', $idArticle);
         $sth2->execute();
         
-       
+       addFlashBag('L\'article a bien été supprimé');
         
        header('Location:article.php');
     

@@ -1,7 +1,15 @@
 <?php
 session_start();
+
+if(!isset($_SESSION['connected']) || $_SESSION['connected'] !== true )
+{
+    header('Location:login.php');
+    exit();
+}
+
 include('../config/config.php');
 include('../lib/bdd.lib.php');
+include('../lib/app.lib.php');
 
 
 $vue = 'addCategorie.phtml';
@@ -27,10 +35,10 @@ try
 
    
 // je vais chercher mon formulaire et l'injecter dans ma bdd
-    if (array_key_exists('nomForm',$_POST)){//on teste sur un des champs jamais sur submit
+if (array_key_exists('nomForm',$_POST)){//on teste sur un des champs jamais sur submit
         
 
-        $newTitreForm = $_POST['nomForm'];
+    $newTitreForm = $_POST['nomForm'];
      
    
 //fonction mettre dans bdd
@@ -40,10 +48,11 @@ try
 
     $sth2->execute();
     
-   header('Location:categorie.php');
-    
+    addFlashBag('La categrorie a bien été ajoutée');
+    header('Location:categorie.php');
+    exit();
             
-    }
+}
 
 /* 4. Afficher ou traiter l'enregistrement */
   

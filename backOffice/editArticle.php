@@ -1,6 +1,9 @@
 <?php 
 
 session_start();
+if(!isset($_SESSION['connected']) || $_SESSION['connected'] !== true )
+header('Location:login.php');
+
 include('../config/config.php');
 include('../lib/bdd.lib.php');
 
@@ -74,7 +77,7 @@ try
 
 //ne pas mettre d'image
 
-        
+                //faire une case a cocher ( en validant elle sera prise en compte si coché) si elle est définie alors ça supprime de la bdd
                 //fonction supprimer du dossier upload
                  if (array_key_exists('erase',$_POST)){
                     $sth4 = $dbh->prepare('SELECT a_image FROM `b_article` WHERE a_id =:idArticle');
