@@ -10,7 +10,7 @@ include('../lib/bdd.lib.php');
 
 $vue = 'editArticle.phtml';
 
-
+$idUser= $_SESSION['user']['id'];
 
 try
 {

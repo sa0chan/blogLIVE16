@@ -10,12 +10,145 @@ CSS COMMUN
 /*html{
 	
 }*/
-      
-.articleListe{
-    width:25px;
+
+body{
+    background-color:#d3ede5;
 }
+      
+
+
+h1, h2{
+    text-align:center;
+    font-family: 'Dancing Script', cursive;
     
-    /********************************************
+}
+
+h1{
+    font-size:5rem;
+}
+
+div.plus{
+    
+    width:50%;
+    
+}
+
+.articleListe{
+    
+    max-width:200px;
+    max-height:150px;
+}
+
+div.plus img, .articleDetail {
+    float:left;
+    padding : 20px ;
+}
+
+div.plus article ,.contentArticle, .comment {
+    padding:10px;
+    border : solid 3px white;
+    border-radius: 20px;
+    margin : 10px;
+    background-color:white;
+    box-shadow: 0px 0px 8px 0px #2b2c27;
+    
+}
+
+div.plus article .divOverflow{
+    max-height:100px;    
+    overflow: hidden;
+}
+
+.divBouton{
+    display:flex;
+    justify-content:flex-end;
+}
+.boutonDetail{
+    color : white;
+    background-color : #77c2ad ;
+    padding:10px;
+    margin: 5px ;
+    border-radius : 50px;
+    box-shadow: 0px 0px 2px 0px #2b2c27;
+    
+}
+
+.boutonDetail:hover{
+    background-color : #9cd3c4 ;
+    text-decoration : none;
+    box-shadow: 0px 0px 4px 0px #8b9b97;
+}
+
+form{
+    
+    width:100%;
+    display :flex;
+    flex-direction:column;
+    justify-content:space-around;
+    padding:20px;
+}
+
+#pseudoForm{
+   
+}
+
+div.contentArticle{
+    width:100%;
+    height:800px;
+    padding:20px;
+}
+
+img.articleDetail{
+    width:400px;
+}
+
+
+
+#logoMarque{
+    width:100px;
+
+}
+   
+nav a{
+    font-size:2rem;
+} 
+
+#dropdownMenu1{
+    font-size:2rem;
+} 
+
+footer{
+    
+    margin-top : 50px;
+    background-color:#77c2ad;
+    
+}
+
+footer img{
+    width:100px;
+}
+
+footer a{
+    
+    font-size : 2rem;
+    color:white ;
+    text-decoration:none;
+}
+
+img:before { 
+  content: "Et ben ya pas d'image:(";
+  display: block;
+  margin-bottom: 10px;
+}
+
+img:after { 
+  url();
+  display: block;
+  font-size: 12px;
+}
+
+
+/********************************************
     FIN CSS COMMUN
     ********************************************/
     

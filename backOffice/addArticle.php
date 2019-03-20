@@ -5,7 +5,7 @@ header('Location:login.php');
 
 include('../config/config.php');
 include('../lib/bdd.lib.php');
-
+include('../lib/app.lib.php');
 
 $vue = 'addArticle.phtml';
 
@@ -14,7 +14,7 @@ $newTitreForm  ='';
 $newCategorie ='';
 $newArticle = '';
 $newImage ='';
-$idUser=1;
+$idUser= $_SESSION['user']['id'];
 $newDate = '';
 $idCat='';
 

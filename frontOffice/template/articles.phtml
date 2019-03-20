@@ -1,0 +1,37 @@
+
+<div class="container ">
+     <h1><?=$titre?></h1>  
+     <p>Créé le <?=$dateConverted?></p>
+     <div class='contentArticle'>
+     <img class="articleDetail"src=<?= UPLOADS_URL.$image?> alt="image-blog">
+     <p><?=$contenu?></p>
+     <a href="#"> par <?=$prenom?> <?=$nom?></a>
+     </div>
+</div>
+<section class="commentaires container plus">
+    <div class="comment">
+        <form method="post" action="addCommentaire.php">
+            <input type="hidden" name="id" value="<?= $idArticle?>">
+            <h3>Votre commentaire</h3>
+            <div>
+                <label for="pseudo">Pseudo</label>
+                <input id="pseudoForm"type="text" name="pseudo" placeholder ="votre pseudo" required>
+                
+                <label for="pseudo">mail</label>
+                <input id="mailForm"type="mail" name="mail" placeholder ="votre mail" required>
+            </div>
+            <textarea style= "height:200px"; name="commentaire" placeholder="entrer votre commentaire ici"></textarea>
+            <input type="submit">
+        </form>
+    </div>
+    <?php $i=0 ;?>
+    <?php foreach($commentaires as $commentaire):?>
+    <div class="comment">
+        <p><?=date("d F Y H:i", strtotime($commentaire['c_date_publi']));?></p>
+        <p><?=$commentaire['c_contenu']?></p>
+        <p><?=$commentaire['c_pseudo']?></p>
+    </div>
+    <?php $i++?>
+    <?php endforeach;?>
+    
+</section>
